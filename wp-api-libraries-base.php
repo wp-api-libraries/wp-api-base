@@ -17,9 +17,12 @@ if( !class_exists( 'WpLibrariesBase' ) ) {
 		protected $args;
 
 		protected $base_uri;
+		
+		protected $is_debug;
 
-		public function __construct( $base_uri ){
+		public function __construct( $base_uri, $debug ){
 			$this->base_uri = $base_uri;
+			$this->is_debug = $debug;
 		}
 
 		/**
@@ -74,7 +77,7 @@ if( !class_exists( 'WpLibrariesBase' ) ) {
 
 			// pp( $body );
 
-			if( !$this->is_status_ok( $code ) ) {
+			if( !$this->is_status_ok( $code ) && !$this->is_debug ) {
 				return new WP_Error( 'response-error', sprintf( __( 'Status: &d', 'wp-postmark-api' ), $code ), $body );
 			}
 
