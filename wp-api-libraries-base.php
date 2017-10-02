@@ -51,7 +51,7 @@ if( !class_exists( 'WpLibrariesBase' ) ) {
 			}
 
 			// Otherwise, if the content type is application/json, then the body needs to be json_encoded
-			else if( 'application/json' === $this->args['headers']['Content-Type'] ) {
+			else if( isset( $this->args['headers']['Content-Type'] ) && 'application/json' === $this->args['headers']['Content-Type'] ) {
 				$this->args['body'] = wp_json_encode( $body );
 			}
 
