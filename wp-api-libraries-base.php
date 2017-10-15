@@ -82,7 +82,7 @@ if ( ! class_exists( 'WpLibrariesBase' ) ) {
 			// If method is get, then there is no body.
 			if ( 'GET' === $method ) {
 				$this->route = add_query_arg( array_filter( $body ), $route );
-			} // Otherwise, if the content type is application/json, then the body needs to be json_encoded
+			} // Otherwise, if the content type is application/json, then the body needs to be json_encoded.
 			elseif ( isset( $this->args['headers']['Content-Type'] ) && 'application/json' === $this->args['headers']['Content-Type'] ) {
 				$this->args['body'] = wp_json_encode( $body );
 			} // Anything else, let the user take care of it.
