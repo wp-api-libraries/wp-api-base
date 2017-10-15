@@ -4,8 +4,9 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "543c2aba3d9898df11f5679e821259a3",
-    "packages": [
+    "content-hash": "afc27f4a863dc49265e23bc3dda449f8",
+    "packages": [],
+    "packages-dev": [
         {
             "name": "squizlabs/php_codesniffer",
             "version": "2.9.1",
@@ -86,20 +87,20 @@
         },
         {
             "name": "stevegrunwell/wp-enforcer",
-            "version": "v0.4.2",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stevegrunwell/wp-enforcer.git",
-                "reference": "d975e353d768005746d9104ba2846040e0f31061"
+                "reference": "6d583588d06346982b5819066f14675ddc8004d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stevegrunwell/wp-enforcer/zipball/d975e353d768005746d9104ba2846040e0f31061",
-                "reference": "d975e353d768005746d9104ba2846040e0f31061",
+                "url": "https://api.github.com/repos/stevegrunwell/wp-enforcer/zipball/6d583588d06346982b5819066f14675ddc8004d7",
+                "reference": "6d583588d06346982b5819066f14675ddc8004d7",
                 "shasum": ""
             },
             "require": {
-                "wp-coding-standards/wpcs": "^0.10.0"
+                "wp-coding-standards/wpcs": "*"
             },
             "bin": [
                 "bin/wp-enforcer"
@@ -123,7 +124,7 @@
                 "git hooks",
                 "wordpress"
             ],
-            "time": "2017-01-04T15:51:27+00:00"
+            "time": "2017-05-28T18:44:13+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
@@ -162,7 +163,6 @@
             "time": "2016-08-29T20:04:47+00:00"
         }
     ],
-    "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],

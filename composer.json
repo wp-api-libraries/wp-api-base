@@ -1,11 +1,13 @@
 {
     "require": {
-        "stevegrunwell/wp-enforcer": "^0.4.1"
     },
     "post-install-cmd": [
     	"wp-enforcer"
 	],
 	"post-update-cmd": [
     	"wp-enforcer"
-	]
+	],
+    "require-dev": {
+        "stevegrunwell/wp-enforcer": "^0.5.0"
+    }
 }
