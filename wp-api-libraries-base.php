@@ -126,7 +126,9 @@ if ( ! class_exists( 'WpLibrariesBase' ) ) {
 		 * @abstract
 		 * @return void
 		 */
-		abstract protected function set_headers();
+		protected function set_headers(){
+			$this->args = array();
+		}
 
 		/**
 		 * Function to be overwritten, gets called after the request has been made (if status code was ok). Should be used to reset headers.
@@ -135,7 +137,9 @@ if ( ! class_exists( 'WpLibrariesBase' ) ) {
 		 * @abstract
 		 * @return void
 		 */
-		abstract protected function clear();
+		protected function clear(){
+			$this->args = array();
+		}
 
 		/**
 		 * Returns whether status is in [ 200, 300 ).
