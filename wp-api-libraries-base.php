@@ -108,12 +108,12 @@ if ( ! class_exists( 'WpLibrariesBase' ) ) {
 			// Retrieve status code and body.
 			$code = wp_remote_retrieve_response_code( $response );
 			$body = json_decode( wp_remote_retrieve_body( $response ) );
+			
+			$this->clear();
 
 			if ( ! $this->is_status_ok( $code ) && ! $this->is_debug ) {
 				return new WP_Error( 'response-error', sprintf( __( 'Status: &d', 'wp-libraries-api-base' ), $code ), $body );
 			}
-
-			$this->clear();
 
 			return $body;
 
