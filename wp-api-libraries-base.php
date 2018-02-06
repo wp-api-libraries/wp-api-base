@@ -53,7 +53,7 @@ if ( ! class_exists( 'WpLibrariesBase' ) ) {
 		 * @param mixed $debug Debug.
 		 * @return void
 		 */
-		public function __construct( $base_uri, $debug ) {
+		public function __construct( $base_uri, $debug = false ) {
 			$this->base_uri = $base_uri;
 			$this->is_debug = $debug;
 		}
@@ -78,6 +78,11 @@ if ( ! class_exists( 'WpLibrariesBase' ) ) {
 
 			// Sets route.
 			$this->route = $route;
+			
+			// Merge bodies.
+			if( isset( $this->args['body'] ) ){
+				$body = array_merge( $this->args['body'], $body );
+			}
 
 			// If method is get, then there is no body.
 			if ( 'GET' === $method ) {
